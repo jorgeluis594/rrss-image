@@ -1,13 +1,13 @@
 ---
 name: rss-image-inicio
-description: Co-design brand identity with the user through an interactive discovery and visual-choice conversation, then create or update MARCA.md for rss-image-generar. Use when starting a brand, refining its visual identity, or updating brand assets. Do not complete identity discovery as a one-shot asset summary.
+description: Co-design brand identity with the user through an interactive discovery and visual-choice conversation, then create or update MARCA.md for $rss-image-generar. Use when starting a brand, refining its visual identity, or updating brand assets. Do not complete identity discovery as a one-shot asset summary.
 ---
 
 Help the owner discover and choose a design identity through conversation. `MARCA.md`
 is the record of shared decisions, not a substitute for that conversation. Inspecting
 a profile, reading assets, or collecting facts does not establish the desired identity.
 Create or update the file in the user-named directory (default: current directory).
-Campaign-specific decisions belong in `direction.md`, later created by `rss-image-generar`.
+Campaign-specific decisions belong in `direction.md`, later created by `$rss-image-generar`.
 
 ## Language and interaction
 
@@ -180,5 +180,5 @@ retain an empty schema. An `aprobado` label is not evidence when the user disput
 Do not invent prior consent. New brand choices still require the interaction above.
 
 Report what was agreed and saved briefly. Stop: image production belongs to
-`rss-image-generar`. If resuming later, use the conversation's open questions and the
+`$rss-image-generar`. If resuming later, use the conversation's open questions and the
 brief's accepted choices instead of restarting the interview.

@@ -40,7 +40,7 @@ image prompts when suitable for the selected tool; copy stays in the brand's lan
 ## 0. Brand context and product truth
 
 Read `MARCA.md` in the user-named directory (default: current directory). If missing,
-ask for `rss-image-inicio` first. Load approved identity, photographic precedents,
+ask for `$rss-image-inicio` first. Load approved identity, photographic precedents,
 restrictions, pending proposals, and the latest three approved references.
 For older documents, preserve approved “Locks visuales”; distinguish binding identity
 from precedents without silently changing existing approvals.
