@@ -1,33 +1,36 @@
-# Tratamiento de fondos para Producto destacado
+# Background treatment for Producto destacado
 
-Pregunta al usuario por la intención visual antes de definir el fondo. A partir de
-su respuesta, completa las decisiones de puesta en escena que falten. Conserva su concepto y la identidad del
-producto; adapta el fondo para que ambos formen una escena coherente y el producto
-sea el primer foco. La separación del fondo es visual, no un efecto de recorte.
+Ask the user about the intended visual feeling before defining the background.
+Use their answer to complete missing staging decisions. Preserve their concept and
+the product's identity; make the background and product a coherent scene with the
+product as the first focal point. Separation from the background must be visual,
+not a cutout effect.
 
-## Caso o situación descrita por el usuario
+## A situation or action described by the user
 
-Si el tipo elegido es Producto destacado y el usuario describe una situación o acción
-(por ejemplo, «una persona comprando una hamburguesa»), esa situación no define por sí
-sola el fondo ni su intención. Antes de fijar la dirección o generar, pregunta por el
-fondo y sus características según los criterios de este documento.
+If the selected type is Producto destacado and the user describes a situation or
+action (for example, “someone buying a hamburger”), that alone does not define the
+background or its intent. Before setting the direction or generating, ask about the
+background and its characteristics using the criteria below.
 
-1. Conserva la situación y el tipo elegidos. No cambies automáticamente a Producto en
-   contexto por la presencia de personas o acciones; el producto sigue siendo el primer foco.
-2. Recoge en una consulta agrupada los datos que falten: lugar o ambiente; sensación o
-   mensaje; iluminación; posición y contacto del producto; perspectiva y escala;
-   profundidad y nitidez; colores y materiales; elementos o movimiento del entorno;
-   intensidad visual y espacio para el texto previsto. Incluye la separación visual
-   del producto al definir cómo debe verse respecto del fondo. Usa lenguaje cotidiano.
-3. Espera la respuesta antes de definir el fondo y producir. No deduzcas un restaurante,
-   mostrador, calle, horario o estilo visual únicamente a partir de la acción de compra.
-   Reutiliza lo ya especificado sin volver a preguntarlo. Si faltan decisiones, el usuario
-   puede delegarlas expresamente después de la consulta; la intención debe quedar expresada.
-4. Registra en `direction.md` la situación, intención, características aportadas y decisiones
-   delegadas. Resuelve estas últimas con los criterios siguientes y los locks de marca.
-   Genera después la pieza completa en una operación, nunca el fondo como base separada.
+1. Preserve the situation and selected type. Do not automatically change to
+   Producto en contexto because people or actions are present; the product remains
+   the first focal point.
+2. In one grouped question, ask for missing details: place or atmosphere; desired
+   feeling or message; lighting; product position and contact; perspective and scale;
+   depth and sharpness; colors and materials; environmental elements or movement;
+   visual intensity and space for the intended text. Include visual separation of the
+   product when defining its appearance relative to the background. Use everyday language.
+3. Wait for the answer before defining the background and producing. Do not infer
+   a restaurant, counter, street, time of day, or visual style solely from the buying
+   action. Reuse supplied information without asking again. After the question, the
+   user may explicitly delegate remaining choices; their intended feeling must be stated.
+4. In `direction.md`, record the situation, intended feeling, supplied characteristics,
+   and delegated choices. Resolve delegated choices with the criteria below and the
+   brand locks. Then generate the complete piece in one operation, never the background
+   as a separate base.
 
-Pregunta para el ejemplo, cuando esos datos faltan:
+Example question to ask when those details are missing; keep it in Spanish:
 «Para la persona comprando la hamburguesa, ¿qué lugar o ambiente quieres de fondo y qué
 sensación debe transmitir? Describe la luz, los colores y materiales, dónde estará la
 hamburguesa respecto de la persona y el entorno, el ángulo y la cercanía de la vista,
@@ -35,51 +38,50 @@ si el fondo debe verse nítido o desenfocado, y qué elementos o movimiento debe
 Indica también qué tan llamativo debe ser y, si llevará texto, dónde debe quedar espacio
 para leerlo. Puedes delegar los detalles visuales que no tengas definidos».
 
-## Criterios de tratamiento
+## Treatment criteria
 
-Aplica los criterios pertinentes a la escena; no es necesario añadir elementos o
-efectos para cumplir todos los puntos.
+Apply the criteria relevant to the scene; do not add elements or effects just to
+satisfy every item.
 
-- **Intención:** pregunta siempre al usuario qué sensación o mensaje quiere transmitir
-  con el fondo y espera su respuesta antes de definirlo. No deduzcas la intención a
-  partir de su descripción visual. Usa la intención expresada para orientar las
-  decisiones visuales sin inventar propiedades comerciales ni cambiar su idea.
-- **Iluminación compartida:** resuelve dirección, intensidad, temperatura de color y
-  suavidad de la luz de forma compatible entre producto y entorno. Los reflejos y
-  brillos del producto deben responder al ambiente.
-- **Contacto y posición:** define dónde está apoyado, suspendido o colocado el
-  producto. Cuando corresponda, incorpora sombras de contacto, reflejos e interacción
-  con la superficie para que su posición resulte creíble. En escenas conceptuales,
-  mantén coherencia interna con la intención elegida.
-- **Perspectiva y escala:** alinea ángulo de cámara, horizonte y proporciones del
-  entorno con la vista disponible del producto. Adapta el entorno sin inventar partes
-  del producto que las referencias no muestran.
-- **Profundidad:** distribuye elementos en distintos planos cuando ayude a dar
-  volumen. Usa distancia, nitidez y superposición sin ocultar la silueta, etiqueta o
-  detalles identificativos importantes.
-- **Separación visual:** ajusta luminosidad, color y nivel de detalle detrás del
-  producto para distinguir su silueta. El entorno puede ser intenso siempre que el
-  producto conserve prioridad y reconocimiento al tamaño de publicación.
-- **Composición y movimiento:** orienta líneas, formas y movimiento hacia el producto
-  o alrededor de él para reforzar su presencia. Controla los puntos brillantes y los
-  detalles que desvíen la atención hacia zonas secundarias.
-- **Color y materiales:** relaciona los tonos del ambiente con el producto y la marca
-  conservando los colores reales del artículo. Ajusta reflejos, transparencias y
-  respuesta a la luz según sus materiales.
-- **Intensidad y espacio de lectura:** concentra el efecto visual donde refuerce la
-  forma o el mensaje del producto. Deja zonas de descanso para la etiqueta, la marca
-  y el texto previsto, con contraste suficiente para leerlos.
+- **Intent:** always ask what feeling or message the background should convey and
+  wait for the answer before defining it. Do not infer intent from a visual
+  description. Use the expressed intent to guide visual choices without inventing
+  commercial properties or changing the user's idea.
+- **Shared lighting:** align direction, intensity, color temperature, and softness
+  across product and setting. Product reflections and highlights should respond to
+  the environment.
+- **Contact and position:** define whether the product rests, floats, or sits
+  somewhere. Add contact shadows, reflections, and surface interaction when relevant
+  so its position is credible. In conceptual scenes, preserve internal coherence
+  with the chosen intent.
+- **Perspective and scale:** align camera angle, horizon, and environmental
+  proportions with the available product view. Adapt the setting without inventing
+  unseen product parts.
+- **Depth:** arrange elements across planes when useful for volume. Use distance,
+  sharpness, and overlap without hiding the silhouette, label, or important
+  identifying details.
+- **Visual separation:** adjust brightness, color, and detail behind the product
+  so its silhouette stands out. The setting may be visually intense as long as the
+  product remains primary and recognizable at publication size.
+- **Composition and movement:** direct lines, forms, and motion toward or around
+  the product to strengthen its presence. Control bright spots and details that
+  draw attention to secondary areas.
+- **Color and materials:** connect environmental tones with the product and brand
+  while preserving the item's actual colors. Adjust reflections, transparency,
+  and response to light according to its materials.
+- **Intensity and reading space:** concentrate visual effects where they support
+  the product's form or message. Leave calm areas for the label, brand, and intended
+  text, with enough contrast to read them.
 
-## Ejemplo de inferencia
+## Inference example
 
-Si el usuario pide un entorno oscuro para un frasco oscuro, resuelve la visibilidad
-de su silueta mediante luz lateral, reflejos compatibles con su material o una zona
-de fondo más clara. Elige lo que encaje con la marca y la escena, conservando el
-ambiente oscuro solicitado. El usuario aporta la idea; el modelo resuelve cómo
-hacerla funcionar visualmente.
+If the user requests a dark setting for a dark bottle, make its silhouette visible
+with side light, reflections compatible with its material, or a lighter background
+area. Choose the solution that fits the brand and scene while retaining the requested
+dark atmosphere. The user provides the idea; the model resolves its visual execution.
 
-## Revisión
+## Review
 
-Comprueba que producto y fondo parezcan pertenecer a la misma escena, que el concepto
-solicitado siga siendo reconocible y que la mirada llegue primero al producto. Revisa
-estos criterios sobre la pieza completa conforme al flujo de producción del skill.
+Check that product and background appear to belong to one scene, the requested
+concept remains recognizable, and the eye goes to the product first. Review these
+criteria on the complete piece under the skill's production workflow.

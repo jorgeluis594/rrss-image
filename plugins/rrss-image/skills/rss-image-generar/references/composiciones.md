@@ -1,115 +1,115 @@
-# Tipos de composición: requisitos operativos
+# Composition types: operational requirements
 
-Clasificación tomada de `tipos-composicion-publicidad-redes.md`, aportado por el usuario
-el 14 de octubre de 2026. Esta referencia es autosuficiente y no necesita el archivo
-original. Las jerarquías son reglas operativas de este skill, no leyes universales ni
-pruebas de mayor conversión. No reutilices datos ficticios de los ejemplos del documento.
+This classification comes from `tipos-composicion-publicidad-redes.md`, supplied by the
+user on October 14, 2026. This reference is self-contained; the original file is not
+required. The hierarchies are operational rules for this skill, not universal laws or
+proof of higher conversion. Do not reuse fictional facts from the source examples.
 
 ## 1. Producto destacado
 
-- Entrada: foto real y mensaje de presentación o cualidad respaldada por el brief.
-- Estructura: un producto principal reconocible, separado del fondo, con espacio para
-  titular y marca. El texto y los objetos secundarios no ocultan rasgos identificativos.
-- Fondo: antes de definirlo, aplica [Tratamiento de fondos](fondos.md). Si el usuario
-  plantea un caso o situación, pregunta por el fondo, su intención y las características
-  faltantes, y espera la respuesta antes de producir. Una acción no define el entorno.
-  Respeta los datos aportados y completa solo las decisiones delegadas, manteniendo
-  el producto como primer foco. No reclasifiques automáticamente como Producto en contexto.
-- Jerarquía: producto → titular → marca y acción, si la acción forma parte del brief.
-- Encuadre: muestra forma y empaque para presentación; muestra el detalle real cuando
-  el mensaje trata sobre textura o acabado. No inventes rasgos fuera de las referencias.
-- Validación: el producto es el primer foco y se reconoce al tamaño de visualización.
-  Si aparece precio, ocupa un nivel secundario.
+- Input: a real photo and an introductory message or product quality supported by the brief.
+- Structure: one recognizable main product, visually separated from the background,
+  with room for a headline and brand. Text and secondary objects do not cover identifying features.
+- Background: apply [Background treatment](fondos.md) before defining it. If the user
+  describes a situation or action, ask about the background, its intent, and missing
+  characteristics, then wait for the answer before producing. An action does not define
+  the setting. Respect supplied details and complete only delegated decisions, keeping
+  the product as the first focal point. Do not automatically reclassify it as Producto en contexto.
+- Hierarchy: product → headline → brand and action, if the action is part of the brief.
+- Framing: show shape and packaging for an introduction; show the actual detail when
+  the message concerns texture or finish. Do not invent features absent from references.
+- Validation: the product is the first focal point and recognizable at viewing size.
+  If a price appears, it has secondary prominence.
 
 ## 2. Producto en contexto
 
-- Entrada: foto real y uso u ocasión definidos.
-- Estructura: entorno relacionado con el uso, acción visible o inferible y producto
-  identificable. Cada objeto secundario cumple una función en la escena. Las manos
-  o personas presentes mantienen anatomía, escala y contacto coherentes.
-- Jerarquía: producto en uso y acción → mensaje de la ocasión → marca y acción de compra.
-  Omite la acción de compra si no pertenece al brief.
-- Texto: ocupa una zona legible sin ocultar el producto ni la acción.
-- Validación: se entiende qué se vende y su relación con la ocasión. No atribuyas
-  rendimiento sin evidencia ni presentes sujetos generados como clientes reales.
+- Input: a real photo and a defined use or occasion.
+- Structure: a setting related to the use, a visible or inferable action, and an
+  identifiable product. Every secondary object has a purpose in the scene. Any hands
+  or people have coherent anatomy, scale, and contact.
+- Hierarchy: product in use and action → occasion message → brand and purchase action.
+  Omit the purchase action if it is not in the brief.
+- Text: place it in a readable area without obscuring the product or action.
+- Validation: viewers can tell what is being sold and how it relates to the occasion.
+  Do not claim unverified performance or present generated subjects as real customers.
 
 ## 3. Comparación
 
-- Entrada: dos opciones o estados identificados, referencias de ambos y un criterio
-  principal con datos verificables. Antes/después requiere evidencia real del resultado;
-  una recreación generada no constituye esa evidencia.
-- Estructura: dos paneles rotulados con encuadre, escala y condiciones comparables.
-  Explica las diferencias mediante texto, sin depender solo del color. Alinea por
-  criterio las filas de atributos adicionales.
-- Jerarquía: opciones o estados → diferencia principal → conclusión y acción si está definida.
-- Producción: genera ambos paneles, rótulos y conclusión en una sola operación, con
-  las referencias originales asignadas a cada variante. No generes paneles separados
-  para ensamblarlos ni pegues recortes de producto sobre fondos generados. No alteres evidencia visual de resultados documentados.
-- Validación: rótulos correctos, diferencias respaldadas, escala sin exageración de
-  ventajas y conclusión limitada a los criterios comprobados. Si se pide generar
-  una falsa prueba de resultado, detén esa parte y solicita evidencia utilizable.
+- Input: two identified options or states, references for both, and one main criterion
+  supported by verifiable data. Before/after requires real evidence of the result;
+  a generated recreation is not that evidence.
+- Structure: two labeled panels with comparable framing, scale, and conditions.
+  Explain differences with text, rather than color alone. Align additional attribute
+  rows by criterion.
+- Hierarchy: options or states → main difference → conclusion and action if defined.
+- Production: generate both panels, labels, and conclusion in one operation, assigning
+  original references to each variant. Do not generate panels separately for assembly
+  or paste product cutouts onto generated backgrounds. Do not alter visual evidence of
+  documented results.
+- Validation: correct labels, supported differences, scale that does not exaggerate
+  advantages, and a conclusion limited to verified criteria. If asked to fabricate
+  evidence of a result, stop that part and request usable evidence.
 
 ## 4. Producto con argumentos
 
-- Entrada: foto real y dos o tres argumentos respaldados, o una reseña auténtica con
-  texto, atribución y producto correspondiente. Solicita argumentos faltantes;
-  no inventes afirmaciones para completar la lista.
-- Estructura: producto visible y bloque de argumentos o anotaciones. En modalidad
-  testimonio, la reseña sustituye la lista. Relaciona atributo y utilidad solo cuando
-  ambos estén respaldados. Las flechas terminan en el detalle aludido; los acercamientos
-  requieren referencias reales de ese detalle.
-- Jerarquía: producto y razón principal → argumentos o prueba → acción si está definida.
-- Validación: argumentos legibles al tamaño previsto y coincidentes con sus fuentes.
-  No inventes sellos, certificaciones ni reseñas; conserva sentido y atribución del testimonio.
+- Input: a real photo and two or three supported arguments, or an authentic review
+  with text, attribution, and the corresponding product. Ask for missing arguments;
+  do not invent claims to complete the list.
+- Structure: visible product and an argument or annotation block. For a testimonial,
+  the review replaces the list. Connect an attribute to a benefit only when both are
+  supported. Arrows end on the relevant detail; close-ups require real references of it.
+- Hierarchy: product and main reason → arguments or evidence → action if defined.
+- Validation: arguments are readable at the intended size and match their sources.
+  Do not invent seals, certifications, or reviews; preserve the meaning and attribution
+  of a testimonial.
 
 ## 5. Oferta protagonista
 
-- Entrada: oferta concreta, producto y presentación incluidos, cantidades y condiciones
-  aplicables; moneda cuando haya precio. Usa precio anterior, porcentaje, fechas y
-  disponibilidad solo si están suministrados o verificados. Una promoción temporal
-  requiere vigencia real. Solicita el canal de compra si falta.
-- Estructura: un dato comercial dominante, producto reconocible, condiciones cerca de
-  la oferta y legibles, acción vinculada al canal de compra.
-- Jerarquía: oferta → producto incluido → condiciones y acción.
-- Datos: muestra precio final y moneda cuando corresponda; precio anterior en segundo
-  nivel. Si publicas precio anterior, final y porcentaje, comprueba su consistencia
-  aritmética y resuelve discrepancias antes de producir.
-- Validación: se entiende qué recibe el comprador y bajo qué condiciones. No inventes
-  urgencia. Otras ventajas no compiten con la oferta principal. Mostrar un pack no
-  cambia el tipo cuando domina el precio o beneficio comercial.
+- Input: a specific offer, included product and presentation, quantities and applicable
+  conditions; currency when a price is shown. Use an earlier price, percentage, dates,
+  and availability only when supplied or verified. A limited-time promotion needs real
+  validity dates. Ask for the purchase channel if missing.
+- Structure: one dominant commercial fact, recognizable product, legible conditions
+  close to the offer, and an action tied to the purchase channel.
+- Hierarchy: offer → included product → conditions and action.
+- Data: show final price and currency where applicable; earlier price has secondary
+  prominence. If displaying an earlier price, final price, and percentage, check their
+  arithmetic consistency and resolve discrepancies before producing.
+- Validation: buyers can tell what they receive and under what conditions. Do not
+  invent urgency. Other benefits must not compete with the main offer. Showing a pack
+  does not change the type when price or commercial benefit dominates.
 
 ## 6. Conjunto de productos
 
-- Entrada: lista y fotos reales de los artículos o variantes, cantidades y relación
-  comercial: pack completo o unidades vendidas por separado.
-- Estructura: artículos organizados por contenido, secuencia o variante; título que
-  expresa la relación y separación para contar e identificar productos. Distingue
-  contenido incluido de objetos de ambientación.
-- Jerarquía: conjunto y relación entre piezas → contenido u opciones → precio y acción
-  cuando formen parte del brief.
-- Escala: conserva proporciones relativas. Si una cuadrícula normaliza tamaños visuales,
-  indica dimensiones reales cuando sean necesarias para comparar. No representes
-  distintas vistas de un artículo como unidades adicionales.
-- Validación: inventario visible y texto coinciden; no hay duplicados, faltantes ni
-  variantes mezcladas; se distingue pack de surtido individual. El precio es secundario.
+- Input: a list and real photos of the items or variants, quantities, and commercial
+  relationship: a complete pack or units sold separately.
+- Structure: items arranged by content, sequence, or variant; a title expressing their
+  relationship; enough separation to count and identify products. Distinguish included
+  contents from decorative props.
+- Hierarchy: set and relationship between items → contents or options → price and
+  action when they are in the brief.
+- Scale: preserve relative proportions. If a grid normalizes apparent sizes, state
+  real dimensions when needed for comparison. Do not show different views of one item
+  as additional units.
+- Validation: visible inventory matches the text; no duplicates, omissions, or mixed
+  variants; the pack is distinguishable from individually sold items. Price is secondary.
 
-## Guardrail de producción para los seis tipos
+## Production guardrail for all six types
 
-Genera la pieza completa de una sola vez, incluidos todos los textos y elementos
-gráficos. En Oferta protagonista, precio, promoción, condiciones y acción aparecen
-en la generación inicial junto al producto. Está prohibido generar una base y añadir
-la oferta después con cualquier herramienta. Si falla un elemento, regenera la pieza
-completa; no edites ni superpongas elementos sobre el resultado.
+Generate the entire piece in one operation, including all text and graphic elements.
+For Oferta protagonista, price, promotion, conditions, and action appear with the
+product in the initial generation. Generating a base and adding the offer later with
+any tool is prohibited. If an element fails, regenerate the entire piece; do not edit
+or overlay elements on the result.
 
-## Control común
+## Common check
 
-Antes de generar, aplica la comprobación de texto del brief en SKILL.md a cada pieza.
-Si no hay texto definido ni información suficiente para inferirlo, pregunta al usuario
-si desea incluir texto y espera su respuesta. La elección explícita de no incluir
-texto se registra; si contradice el mensaje que define el tipo, resuelve el conflicto
-antes de producir. No añadas textos de relleno para cumplir una estructura.
+Before generating, apply the brief's text check in SKILL.md to every piece. If no text
+is defined and there is not enough information to infer it, ask the user in Spanish
+whether to include text and wait for the answer. Record an explicit choice to omit
+text; if it conflicts with the message defining the type, resolve the conflict before
+producing. Do not add filler copy merely to satisfy a structure.
 
-
-Registra tipo, modificadores, entradas y fuentes, bloques, jerarquía y validación por
-pieza. En carruseles, aplica los requisitos por lámina. Corrige los incumplimientos
-contra el contrato; no reclasifiques silenciosamente después de generar.
+Record type, modifiers, inputs and sources, blocks, hierarchy, and validation for each
+piece. In a carousel, apply the requirements to each slide. Correct failures against
+the contract; do not silently reclassify after generation.

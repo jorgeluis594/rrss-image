@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "rrss-image",
-  "version": "1.0.1",
-  "description": "Define la identidad visual de una marca y crea anuncios de producto para redes sociales.",
+  "version": "1.0.2",
+  "description": "Define a brand's visual identity and create product ads for social media.",
   "extensions": {
     "com.openai": {
       "requires_local_executor": true

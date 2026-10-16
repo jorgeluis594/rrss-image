@@ -1,16 +1,16 @@
 # rrss-image
 
-Dos skills para definir la identidad visual de una marca (`rss-image-inicio`) y crear anuncios de producto (`rss-image-generar`). El segundo usa las decisiones guardadas en `MARCA.md` y fotos reales del producto.
+Two Codex skills for defining a brand's visual identity (`rss-image-inicio`) and creating product ads (`rss-image-generar`). The second skill uses decisions saved in `MARCA.md` and real product photos.
 
-## Instalación en Codex
+## Install in Codex
 
 ```sh
 codex plugin marketplace add jorgeluis594/rrss-image
 codex plugin add rrss-image@rrss-image
 ```
 
-Inicia una conversación nueva para usar los skills.
+Start a new chat to use the skills. Both skills communicate with users and ask questions in Spanish.
 
-## Requisitos de uso
+## Requirements
 
-`rss-image-generar` requiere generación de imágenes que admita fotos de referencia. Cada usuario aporta sus fotos y su propio `MARCA.md`.
+`rss-image-generar` requires image generation that accepts reference photos. Each user supplies their own photos and `MARCA.md`.

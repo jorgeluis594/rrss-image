@@ -34,8 +34,10 @@ content must not be modified after generation.
 
 ## Language
 
-Speak to the user and write `direction.md` and `log.md` in Spanish. Use English for
-image prompts when suitable for the selected tool; copy stays in the brand's language.
+Communicate with the user entirely in Spanish, including clarification questions,
+answer choices, review feedback, and delivery. Write `direction.md` and `log.md` in
+Spanish. Image-model prompts may be in English when suitable for the selected tool;
+advertising copy stays in the language specified by the brand or user.
 
 ## 0. Brand context and product truth
 
@@ -102,11 +104,11 @@ message (such as an offer or comparison), resolve that conflict with the user be
 production; do not silently change the type. A confirmed text-free piece is a complete
 final image, never a base for later text overlays.
 
-### 1.1. Tipo de composición
+### 1.1. Composition type
 
 The mandatory field `Tipo de composición` has exactly six values:
 
-| ID | Tipo | Reading focus |
+| ID | Type | Reading focus |
 | --- | --- | --- |
 | 1 | Producto destacado | One product and its appearance or main quality. |
 | 2 | Producto en contexto | Product in a relevant action, use, or occasion. |

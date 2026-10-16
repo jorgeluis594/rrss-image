@@ -1,51 +1,49 @@
-# Composición de luz
+# Lighting composition
 
-Antes de generar, propone la luz de **esta escena** en `direction.md` y llévala al
-prompt. Describe decisiones visibles, no solo adjetivos como «luz coherente»,
-«cinematográfica» o «suave». La propuesta debe permitir anticipar dónde habrá luz y
-sombra en el producto y en el entorno. Respeta la dirección dada por el usuario y
-los locks de marca; no presentes decisiones de iluminación como hechos medidos.
+Before generating, propose the lighting for **this scene** in `direction.md` and
+carry it into the prompt. Describe visible decisions, rather than only adjectives
+such as “coherent”, “cinematic”, or “soft” lighting. The proposal should make it
+possible to anticipate light and shadow on the product and in the setting. Respect
+user direction and brand locks; do not present lighting choices as measured facts.
 
-Concreta los puntos que afecten la escena:
+Specify the points that affect the scene:
 
-- **Fuente y posición:** sol, cielo, ventana o lámpara; desde qué lado y altura del
-  encuadre llega. Si hay más fuentes, asigna a cada una una función visible.
-- **Calidad y color:** luz directa o difusa, bordes de sombra definidos o suaves,
-  temperatura cálida o fría. Evita órdenes contradictorias, como sol intenso con
-  todas las sombras borradas sin una fuente de relleno.
-- **Producto y sujeto:** superficies concretas que reciben luz, zonas que quedan en
-  sombra y luz de relleno si corresponde. Conserva los colores reales del producto.
-- **Entorno y contacto:** dirección y suavidad de las sombras proyectadas por todos
-  los objetos; sombra de contacto donde apoyan patas, manos, envases o producto.
-- **Reflejos y luces prácticas:** qué se refleja en vidrio o metal; hasta dónde llega
-  la luz de lámparas, vitrinas o pantallas. No ilumines un sujeto exterior con una
-  lámpara interior sin una razón espacial visible.
+- **Source and position:** sun, sky, window, or lamp; the side and height from which
+  it reaches the frame. Give each additional source a visible role.
+- **Quality and color:** direct or diffuse light, hard or soft shadow edges, warm or
+  cool temperature. Avoid contradictory instructions, such as intense sun with every
+  shadow erased and no fill source.
+- **Product and subject:** specific surfaces that catch the light, areas that remain
+  in shadow, and fill light where appropriate. Preserve the product's real colors.
+- **Setting and contact:** direction and softness of shadows cast by every object;
+  contact shadows where paws, hands, packaging, or the product touch a surface.
+- **Reflections and practical lights:** what glass or metal reflects and how far light
+  from lamps, display cases, or screens reaches. Do not light an outdoor subject with
+  an indoor lamp without a visible spatial reason.
 
-Elige solo los detalles relevantes; no hace falta introducir todas las fuentes o
-efectos de la lista. No añadas un brillo de contorno uniforme si la escena no tiene
-una fuente que lo produzca. Si la foto de referencia y la escena nueva tienen luces
-distintas, preserva la identidad y el color del producto, e integra su iluminación
-con la escena nueva.
+Choose only relevant details; the scene does not need every source or effect above.
+Do not add a uniform rim glow without a source that could produce it. If the reference
+photo and new scene have different lighting, preserve product identity and color while
+integrating its lighting with the new scene.
 
-## Ejemplo: perrito con camiseta roja frente a KFC
+## Example: a small dog in a red shirt outside KFC
 
-**Propuesta de dirección:** sol de tarde desde arriba a la derecha de la cámara,
-con algo de relleno neutro del cielo. La mejilla derecha del perrito, el pelo de ese
-lado, la manga crema y la parte superior derecha de la camiseta reciben el sol. Su
-lado izquierdo conserva detalle, pero queda menos iluminado. El alero de KFC es más
-oscuro por debajo. El perro proyecta una sola sombra hacia la izquierda sobre la
-acera, conectada con las patas que la tocan; maceteros y fachada proyectan sombras
-en la misma dirección y con bordes de suavidad parecida. Los cristales reflejan el
-cielo y los árboles próximos. Las lámparas visibles iluminan el interior del local,
-no al perro en la calle. El pelaje no tiene un halo brillante uniforme.
+**Direction proposal:** late afternoon sun from above and camera right, with some
+neutral fill from the sky. The dog's right cheek, fur on that side, cream sleeve, and
+upper-right part of the shirt catch the sun. The left side retains detail but receives
+less light. The KFC awning is darker underneath. The dog casts one shadow to the left
+on the sidewalk, connected to its paws; planters and facade cast shadows in the same
+direction with similarly soft edges. The windows reflect the sky and nearby trees.
+Visible lamps light the restaurant interior, not the dog outside. The fur has no
+uniform bright halo.
 
-**Cómo se vería en el prompt:** «Luz de sol de tarde desde la esquina superior derecha
-de la cámara; ilumina la mejilla derecha, la manga crema y los pliegues superiores
-de la camiseta roja. El lado izquierdo recibe luz suave del cielo. Sombras del perro
-y los maceteros hacia la izquierda, con sombra de contacto bajo las patas; alero
-oscuro por debajo; cristales con reflejos del cielo y árboles. Las lámparas iluminan
-solo el interior. Sin halo de estudio alrededor del pelaje».
+**How this could appear in the image prompt:** “Late afternoon sunlight from the
+upper-right camera angle illuminates the right cheek, cream sleeve, and upper folds
+of the red shirt. Soft skylight reaches the left side. The dog and planters cast
+shadows leftward, with contact shadows under the paws; the awning is dark beneath;
+windows reflect sky and trees. Lamps illuminate only the interior. No studio halo
+around the fur.”
 
-Esta dirección es un ejemplo para esa escena, no una receta de luz para todas las
-campañas. Si el usuario elige cielo nublado, luz de estudio u otra hora, describe
-sus efectos concretos con la misma precisión.
+This direction is an example for that scene, not a lighting recipe for every
+campaign. If the user chooses overcast skies, studio lighting, or another time of day,
+describe its concrete effects with the same precision.

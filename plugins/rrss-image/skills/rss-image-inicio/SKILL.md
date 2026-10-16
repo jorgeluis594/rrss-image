@@ -11,8 +11,10 @@ Campaign-specific decisions belong in `direction.md`, later created by `$rss-ima
 
 ## Language and interaction
 
-Speak to the user and write `MARCA.md` in Spanish. Use accessible descriptions and
-concrete comparisons rather than requiring knowledge of fonts, hex codes, or lenses.
+Communicate with the user entirely in Spanish, including questions, answer choices,
+recommendations, progress updates, and the final response. Write `MARCA.md` in Spanish.
+Use accessible descriptions and concrete comparisons rather than requiring knowledge
+of fonts, hex codes, or lenses.
 
 - Work in short rounds with one to three related questions. Ask, wait for the user's
   answer, interpret it, and then continue. Do not present all rounds in one questionnaire.
@@ -37,10 +39,10 @@ pending” is unfinished discovery, even if it contains many observations.
 
 Start with the most consequential open questions, for example:
 
-- Who should feel this brand is for them, and what should they value about it?
-- What should someone feel on seeing an ad: celebration, trust, playfulness, care,
-  exclusivity, or something else? Ask which matters most and why.
-- What should be preserved from the current brand, and what feels wrong or generic?
+- «¿Para quién debería sentirse hecha esta marca y qué debería valorar ese público?»
+- «¿Qué debería sentir alguien al ver un anuncio: celebración, confianza, juego,
+  cuidado, exclusividad u otra cosa? ¿Qué importa más y por qué?»
+- «¿Qué debería mantenerse de la marca actual y qué se siente incorrecto o genérico?»
 
 Confirm missing business facts only as needed: products, sales channels, service area,
 formats, and language. Separate facts from preferences. Never invent commercial facts.
@@ -50,9 +52,9 @@ Do not skip identity discovery merely because these facts are visible on a profi
 
 Open supplied assets. Respect exclusions, including posts the user says are AI-generated
 or not representative. Explain two or three relevant observations and ask what the
-user wants to keep or change. Useful prompts: “Which of these feels more like your
-brand, and which detail makes the difference?” or “Do you like its color, its mood,
-or how clearly it shows the product?” Do not treat liking one detail as accepting all.
+user wants to keep or change. Useful prompts: «¿Cuál de estas referencias se parece
+más a tu marca y qué detalle marca la diferencia?» or «¿Te gusta su color, su ambiente
+o la claridad con que muestra el producto?» Do not treat liking one detail as accepting all.
 
 Distinguish:
 
