@@ -47,10 +47,10 @@ Start with the most consequential open questions, for example:
 Confirm missing business facts only as needed: products, sales channels, service area,
 formats, and language. Separate facts from preferences. Never invent commercial facts.
 Do not skip identity discovery merely because these facts are visible on a profile.
-Ask whether the user has a brand logo: «¿Tienes un logo de la marca? Si lo tienes,
-compárteme el archivo original para usarlo en las imágenes». If not, continue the
-identity conversation without requiring one. Do not ask again if a usable logo was
-already supplied.
+Ask whether the user has a brand logo: «¿Tienes un logo de la marca? Puedes adjuntar
+o pegar la imagen, darme la ruta del archivo o compartir una URL para que lo guarde
+y lo use en las imágenes». If not, continue the identity conversation without
+requiring one. Do not ask again if a usable logo was already supplied.
 
 ## 2. Explore evidence together
 
@@ -60,13 +60,22 @@ user wants to keep or change. Useful prompts: «¿Cuál de estas referencias se 
 más a tu marca y qué detalle marca la diferencia?» or «¿Te gusta su color, su ambiente
 o la claridad con que muestra el producto?» Do not treat liking one detail as accepting all.
 
-If the user supplies a logo file, keep an unmodified copy in an `assets/` directory
-beside `MARCA.md` (reuse it if already there). Preserve its original format and avoid
-overwriting an existing file. Confirm which variant is the primary logo if several
-are supplied, and ask about any known usage restrictions. If the file is inaccessible,
-request an accessible copy; do not claim it was saved. Record the usable path relative
-to `MARCA.md` under `Assets y referencias`, labeled `logo principal`, so
-`$rss-image-generar` can load the actual file rather than recreate it from a description.
+When the user supplies a logo by attachment, pasted image, local path, or URL, save
+the image content as a local file in `referencias/` beside `MARCA.md`.
+For an attachment or pasted image, save its image data; for a path, copy the file; for
+a direct image URL, download the image. If the URL points to a webpage, find its logo
+image and download that; ask which one to use if the page has ambiguous variants.
+Keep the supplied image format and content when possible. Never substitute a written
+description, remote link, or browser screenshot for an available image file. Reuse an
+identical existing copy and never overwrite a different
+file. Confirm the primary variant if several are supplied and ask about known usage
+restrictions. Verify that the saved image opens. If its content cannot be accessed or
+saved, request another attachment, path, or URL; do not claim the logo was preserved.
+When writing `MARCA.md`, add a local Markdown image reference under
+`Assets y referencias`, for example `![Logo principal](referencias/logo.png)`, pointing
+to the saved file. Verify that this relative reference resolves. This local copy is
+the asset `$rss-image-generar` must use; a source URL or original external path alone
+is insufficient.
 
 Distinguish:
 
@@ -158,8 +167,8 @@ Use only the relevant sections from this structure:
   what can vary by campaign. Include meaningful brand-specific aesthetic exclusions.
 - Assets y referencias: usable paths/links with a short role, such as “logo principal”
   or “referencia de composición”. Prefer selected assets over a broad profile requiring
-  a repeated investigation. Always include the supplied primary logo's saved path;
-  limit other approved image references to three.
+  a repeated investigation. Include the saved primary logo as a local Markdown image
+  reference; limit other approved image references to three.
 - Formatos y canales: actual agreed destinations and formats needed for design.
 - Restricciones de marca: only specific, durable constraints that affect future ads,
   such as a prohibited claim or a known usage restriction on an asset.

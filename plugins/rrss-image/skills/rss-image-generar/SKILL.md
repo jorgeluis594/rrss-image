@@ -46,12 +46,18 @@ ask for `$rss-image-inicio` first. Load approved identity, photographic preceden
 restrictions, pending proposals, and the latest three approved references.
 For older documents, preserve approved “Locks visuales”; distinguish binding identity
 from precedents without silently changing existing approvals.
-If `MARCA.md` lists a `logo principal`, resolve its path relative to `MARCA.md` and
-load the actual file. Include the logo in finished ads by default unless the user
-asks to omit it or a recorded restriction prevents use. Supply that file as a visual
-reference in the same image-model operation that generates the ad; preserve its design.
-Do not recreate it from a text description. If the saved file is missing or
-inaccessible, ask the user for it before producing a logo-bearing image.
+If `MARCA.md` embeds a `Logo principal` image, resolve the local Markdown reference
+relative to `MARCA.md` and open the saved file in `referencias/`. Include the logo in
+finished ads by default unless the user asks to omit it or a recorded restriction
+prevents use. Supply the saved image content as a visual reference in the same
+image-model operation that generates the ad; preserve its design. If the model cannot
+accept the saved format, render a compatible copy from it while retaining the original.
+A Markdown link,
+source URL, or text description alone does not supply the image to the model. If the
+local file is missing or inaccessible, ask the user to supply it again before
+producing a logo-bearing image.
+For older `MARCA.md` files that list a local logo path without an embedded image,
+load that file as the reference when it exists.
 
 - A real product photo is required for a finished sales image. Without one, request
   it or deliver a clearly labeled layout with a placeholder.
