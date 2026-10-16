@@ -1,0 +1,14 @@
+{
+  "name": "rrss-image",
+  "description": "Skills para identidad visual y anuncios de producto",
+  "owner": {
+    "name": "jorgeluis594"
+  },
+  "plugins": [
+    {
+      "name": "rrss-image",
+      "source": "./plugins/rrss-image",
+      "description": "Identidad visual y anuncios de producto para redes sociales"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "rrss-image",
+  "version": "1.0.0",
+  "private": true,
+  "pi": {
+    "skills": ["./plugins/rrss-image/skills"]
+  }
+}
