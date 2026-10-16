@@ -15,7 +15,7 @@ visual decisions. Include exclusions only when supported by the selected tool.
 
 ```text
 <Composition ID/name and purpose>, for <placement and aspect ratio>.
-Hierarchy: <reading order and required blocks from composiciones.md>.
+Hierarchy: <reading order and required blocks from the selected type's file>.
 Source: <actual reference and role: product or style>.
 Product identity: <shape, proportions, materials, print, trim, labels, colors, parts to preserve>.
 Scene: <surface, location, and purposeful props if any>.
@@ -90,7 +90,7 @@ piece, report the limitation instead of splitting production into stages.
 
 Specify all advertising copy and typography in the initial prompt. Use approved fonts or
 record the campaign choice without changing brand locks.
-Use the selected composition’s required blocks and hierarchy from `composiciones.md`,
+Use the selected composition’s required blocks and hierarchy from its `references/tipo-<ID>-*.md` file,
 plus the logo. Do not force arguments, conditions, or panel labels into three copy roles.
 Establish hierarchy by size, weight, spacing, and placement; extra copy must earn its
 space through the brief and remain legible at expected viewing size.

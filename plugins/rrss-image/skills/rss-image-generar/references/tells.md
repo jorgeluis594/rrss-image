@@ -35,7 +35,7 @@ product identity and commercial features, not pixel equality.
 | Weak contrast or content in interface overlays | Measure contrast where possible; verify placement-specific safe zones and preview the export. |
 | Detail insets or promotional badges | Do they communicate necessary information? Keep them when useful and legible; remove redundant ones. |
 
-Check the selected type’s blocks and reading hierarchy in `composiciones.md`.
+Check the selected type’s blocks and reading hierarchy in its `references/tipo-<ID>-*.md` file.
 A separate logo does not count as an advertising message. Required arguments,
 conditions, and comparison labels must remain legible at the final viewing size.
 

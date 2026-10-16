@@ -6,8 +6,10 @@ description: Produce a product sales image or campaign series (social posts, sto
 Read `references/tells.md` for review criteria and `references/recipe.md` for prompt,
 reference-guided generation, and layout guidance before producing the first image.
 
-This file defines the workflow and product-truth requirements. References define production methods and review criteria. Read `references/composiciones.md`
-before selecting a composition; its requirements control the layout for each type. Explicit user direction
+This file defines the workflow and product-truth requirements. References define production methods and review criteria. Each composition type has its own
+reference, `references/tipo-<ID>-<nombre>.md` (listed in §1.1). Read only the selected
+type's file; its requirements control that piece's layout. They are operational rules
+for this skill, not universal laws or proof of higher conversion. Explicit user direction
 takes precedence over aesthetic defaults; record intentional departures in the contract.
 
 ## Guardrail: generate the complete advertisement in one operation
@@ -120,17 +122,17 @@ final image, never a base for later text overlays.
 
 The mandatory field `Tipo de composición` has exactly six values:
 
-| ID | Type | Reading focus |
-| --- | --- | --- |
-| 1 | Producto destacado | One product and its appearance or main quality. |
-| 2 | Producto en contexto | Product in a relevant action, use, or occasion. |
-| 3 | Comparación | Two options or states and a verifiable difference. |
-| 4 | Producto con argumentos | Product and supported arguments or authentic testimony. |
-| 5 | Oferta protagonista | A dominant price or commercial offer. |
-| 6 | Conjunto de productos | Contents of a pack or options in an assortment. |
+| ID | Type | Reading focus | Reference |
+| --- | --- | --- | --- |
+| 1 | Producto destacado | One product and its appearance or main quality. | `tipo-1-producto-destacado.md` |
+| 2 | Producto en contexto | Product in a relevant action, use, or occasion. | `tipo-2-producto-en-contexto.md` |
+| 3 | Comparación | Two options or states and a verifiable difference. | `tipo-3-comparacion.md` |
+| 4 | Producto con argumentos | Product and supported arguments or authentic testimony. | `tipo-4-producto-con-argumentos.md` |
+| 5 | Oferta protagonista | A dominant price or commercial offer. | `tipo-5-oferta-protagonista.md` |
+| 6 | Conjunto de productos | Contents of a pack or options in an assortment. | `tipo-6-conjunto-de-productos.md` |
 
 1. Use the user's selected number or name and check its inputs in
-   `references/composiciones.md`.
+   that type's reference file.
 2. If the user delegates selection, classify the main message in this order:
    offer/price → 5; difference between two options/states → 3; pack contents or
    assortment → 6; reasons to buy or evidence → 4; use or occasion → 2;
@@ -140,6 +142,10 @@ The mandatory field `Tipo de composición` has exactly six values:
    Stop dependent production until answered.
 4. Request any missing evidence or commercial facts required by the selected type.
    Do not silently switch types to bypass requirements.
+
+If the type is 1, ask «¿Lo quieres como destacado clásico o como anatomía del producto
+(producto con etiquetas que señalan sus partes visibles)?» unless the user already chose;
+wait for the answer and apply that variant's requirements in `references/tipo-1-producto-destacado.md`.
 
 Assign one type per piece. Record occasion, launch, gift, and testimony as modifiers,
 not additional types. An offer-led pack belongs to type 5; an inventory-led pack to 6.
@@ -184,7 +190,7 @@ direction already supplied by the user or locked by the brand.
 Save `direction.md` next to the outputs:
 
 - Intended audience, message, placement, publication format, piece count and order.
-- Per piece: composition ID and exact name, modifiers, selection basis, required
+- Per piece: composition ID and exact name (with variant for type 1), modifiers, selection basis, required
   blocks, reading hierarchy, exact copy, commercial facts and their sources.
 - Approved identity locks and their sources.
 - Campaign constants: light and direction, surface/location, color treatment,
@@ -221,7 +227,7 @@ Use the catalog's three review levels:
    or misleading representation. Compare with the original at full size. Fix before
    delivery as a finished ad; changing style cannot excuse these defects.
 2. Communication: requirements and hierarchy of the selected type in
-   `references/composiciones.md`, product visibility, message space, crop, and placement suitability.
+   its reference file, product visibility, message space, crop, and placement suitability.
 3. Specificity: identify concrete connections to this product and brand, and any
    unjustified defaults. Familiar composition alone is not a failure.
 
@@ -250,7 +256,7 @@ when all applicable product, composition, communication, and export checks pass.
 
 ## 6. Memory and delivery
 
-Append to `log.md`: composition ID/name and modifiers per piece, publication format,
+Append to `log.md`: composition ID/name, variant, and modifiers per piece, publication format,
 output and source paths, prompt, tool/model, seed if exposed,
 contract, product features checked against references, verdict, defects/repairs, performed checks, and assumptions.
 Use `no disponible` for unavailable metadata; never invent a seed or measurement.
