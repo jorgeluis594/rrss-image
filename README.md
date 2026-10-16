@@ -13,4 +13,4 @@ Start a new chat to use the skills. Both skills communicate with users and ask q
 
 ## Requirements
 
-`rss-image-generar` requires image generation that accepts reference photos. Each user supplies their own photos and `MARCA.md`.
+`rss-image-generar` requires image generation that accepts reference photos. Each user supplies their own product photos. If they have a logo, `rss-image-inicio` saves it beside `MARCA.md` for use as a visual reference when generating ads.

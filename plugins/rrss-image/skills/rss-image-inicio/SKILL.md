@@ -47,6 +47,10 @@ Start with the most consequential open questions, for example:
 Confirm missing business facts only as needed: products, sales channels, service area,
 formats, and language. Separate facts from preferences. Never invent commercial facts.
 Do not skip identity discovery merely because these facts are visible on a profile.
+Ask whether the user has a brand logo: «¿Tienes un logo de la marca? Si lo tienes,
+compárteme el archivo original para usarlo en las imágenes». If not, continue the
+identity conversation without requiring one. Do not ask again if a usable logo was
+already supplied.
 
 ## 2. Explore evidence together
 
@@ -55,6 +59,14 @@ or not representative. Explain two or three relevant observations and ask what t
 user wants to keep or change. Useful prompts: «¿Cuál de estas referencias se parece
 más a tu marca y qué detalle marca la diferencia?» or «¿Te gusta su color, su ambiente
 o la claridad con que muestra el producto?» Do not treat liking one detail as accepting all.
+
+If the user supplies a logo file, keep an unmodified copy in an `assets/` directory
+beside `MARCA.md` (reuse it if already there). Preserve its original format and avoid
+overwriting an existing file. Confirm which variant is the primary logo if several
+are supplied, and ask about any known usage restrictions. If the file is inaccessible,
+request an accessible copy; do not claim it was saved. Record the usable path relative
+to `MARCA.md` under `Assets y referencias`, labeled `logo principal`, so
+`$rss-image-generar` can load the actual file rather than recreate it from a description.
 
 Distinguish:
 
@@ -146,7 +158,8 @@ Use only the relevant sections from this structure:
   what can vary by campaign. Include meaningful brand-specific aesthetic exclusions.
 - Assets y referencias: usable paths/links with a short role, such as “logo principal”
   or “referencia de composición”. Prefer selected assets over a broad profile requiring
-  a repeated investigation. Include only useful approved references, up to three images.
+  a repeated investigation. Always include the supplied primary logo's saved path;
+  limit other approved image references to three.
 - Formatos y canales: actual agreed destinations and formats needed for design.
 - Restricciones de marca: only specific, durable constraints that affect future ads,
   such as a prohibited claim or a known usage restriction on an asset.
