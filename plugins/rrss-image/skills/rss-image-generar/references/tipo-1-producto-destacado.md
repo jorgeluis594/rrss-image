@@ -32,8 +32,8 @@ Product, headline, and brand as described above.
   where the line will point (e.g. «CREMA → copete de crema batida»). Wait for the
   user's confirmation or changes; do not generate until the list is confirmed.
 - Record the final label list and its source (user or confirmed proposal) in `direction.md`.
-- Labels: one or two words that name a part or attribute visible in the reference
-  (cream, marbling, stitching, sole). A label that cannot be checked by looking at
+- Labels: one or two words that name a part or attribute visible in the reference.
+  A label that cannot be checked by looking at
   the photo is a claim or benefit ("sin azúcar", "más resistente") and belongs to
   Producto con argumentos; do not include it here. Do not invent parts, layers, or
   toppings to have something to label.

@@ -34,6 +34,17 @@ produce a compliant complete piece, report the limitation and stop; do not fall 
 to a base-plus-edit workflow. Saving or copying the generated file is allowed; visual
 content must not be modified after generation.
 
+## Guardrail: do not change the reference product
+
+The product in the ad must be the same product supplied in the reference, never a
+different or similar one. Its presentation may be enhanced to make it more attractive
+and coherent with the scene: lighting, angle, cleanliness, freshness, gloss, styling,
+and finish. It must stay recognizable as that product, with the same type, variant,
+shape, colors, labels, and contents, and must not show components or quantities the
+buyer would not receive. Do not replace it with another product or variant to fit the
+composition, copy, or background unless the user explicitly asks; record that request
+in `direction.md`. If the piece seems to need a different product, ask the user.
+
 ## Language
 
 Communicate with the user entirely in Spanish, including clarification questions,
