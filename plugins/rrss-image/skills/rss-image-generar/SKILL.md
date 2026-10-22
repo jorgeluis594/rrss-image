@@ -52,10 +52,53 @@ answer choices, review feedback, and delivery. Write `direction.md` and `log.md`
 Spanish. Image-model prompts may be in English when suitable for the selected tool;
 advertising copy stays in the language specified by the brand or user.
 
+## Brand storage (shared contract)
+
+Resolve the persistent brand directory independently of the current chat, working
+folder, and plugin installation. Use the user's explicit brand directory when given;
+otherwise use the platform's user-data directory:
+
+- macOS: `~/Library/Application Support/rrss-image/marcas/`
+- Windows: `%LOCALAPPDATA%\rrss-image\marcas\`
+- Linux: `${XDG_DATA_HOME:-~/.local/share}/rrss-image/marcas/`
+
+Expand paths using the actual user's home and environment. Store each brand in a
+stable `<brand-id>/` folder containing `MARCA.md` and `referencias/`; reuse that ID
+when updating the brand. Never store user brand data inside the plugin installation.
+
+Resolve an explicitly named brand among these folders. If none is named, reuse the
+only registered brand, or ask which to use if several exist. Do not select by last
+use. A local `MARCA.md` in the current folder is a legacy fallback only when no
+explicit brand or directory was requested and no registered brand exists. Reuse it
+without restarting discovery; migrate it with its relative assets only when requested.
+
+Distinguish missing files from access errors; never treat an inaccessible brand as
+nonexistent or silently save it elsewhere.
+
+Before discovery that will save a brand, or any later write to brand storage, check
+that the resolved destination is writable. If it does not exist, walk upward to the
+nearest existing directory. When creation requires additional access, request write
+permission on that existing ancestor, explaining that it is needed only to create
+the intended brand-storage subtree. Do not repeatedly request nonexistent child
+paths: on Linux, an approved path that does not exist may still fail with a read-only
+filesystem error. Reuse applicable permissions already granted in the session.
+
+After permission is granted, create only the intended storage directories and verify
+access by creating, reading, and deleting a uniquely named temporary probe there.
+An approval response alone is not proof of writable access. Never overwrite an
+existing file for this test or create MARCA.md before identity approval. If the
+probe still fails, report the actual path and error and stop dependent work; do not
+change global configuration or ask the user to run a repair script. Reading an
+existing brand does not require a write probe. Recheck access in a new session when
+writing; session permission does not imply permanent or cross-chat authorization.
+After saving, read back `MARCA.md`, check its local asset references, and report its
+absolute path. Campaign outputs remain in the requested output folder; this contract
+changes only persistent brand storage.
+
 ## 0. Brand context and product truth
 
-Read `MARCA.md` in the user-named directory (default: current directory). If missing,
-ask for `$rss-image-inicio` first. Load approved identity, photographic precedents,
+Resolve the brand using the shared contract above and read its `MARCA.md`. Only if
+no existing brand is found, ask for `$rss-image-inicio` first. Load approved identity, photographic precedents,
 restrictions, pending proposals, and the latest three approved references.
 For older documents, preserve approved “Locks visuales”; distinguish binding identity
 from precedents without silently changing existing approvals.
