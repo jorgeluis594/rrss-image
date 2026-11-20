@@ -95,11 +95,63 @@ After saving, read back `MARCA.md`, check its local asset references, and report
 absolute path. Campaign outputs remain in the requested output folder; this contract
 changes only persistent brand storage.
 
+## Pending brand changes (shared contract)
+
+`MARCA.md` is owned by `$rss-image-inicio` and `ESTILO-VIDEO.md` by
+`$rss-video-estilo`; no other skill rewrites them, except the «Referencias aprobadas»
+list of `MARCA.md`, which `$rss-image-generar` maintains. Corrections the user makes while
+working that may belong in those lasting rules go to `CAMBIOS-PENDIENTES.md`, beside
+`MARCA.md`. Any skill may append entries there; only the owner of the affected
+document closes them, after the user approves the change in conversation. Never
+delete entries. `$rss-memoria`, when available, keeps history and lessons; this file
+is the queue of proposed rule changes, and the documents change only through it.
+
+- **On start.** After reading `MARCA.md` (and `ESTILO-VIDEO.md` for video), read
+  `CAMBIOS-PENDIENTES.md` if it exists. If it has `abierto` entries, tell the user
+  once, in one or two lines, how many there are, which document they affect, and
+  which skill closes them. Do not apply them and do not treat them as rules: the
+  documents rule until their owner records the change. Never repair a document as
+  a side effect of another task.
+- **While working.** When the user corrects something or asks for something new,
+  decide where it belongs:
+  - Only this piece (a crop, a word, a take, one timing): handle it in the piece's
+    own files.
+  - A lasting rule: the user says so («siempre», «en todos», «la marca es así»), the
+    same request already appears in another piece's `log.md` or in an open entry, or
+    it contradicts, extends, or narrows a line of `MARCA.md` or `ESTILO-VIDEO.md`.
+    Apply it to this piece once the user confirms, record that in the piece's
+    `log.md`, and append an entry.
+  - Unsure: ask once, «¿Esto es solo para esta pieza o para todas las de la marca?»,
+    when the answer changes what you record.
+- **At final approval** of a piece (a video reaching `terminado`, an image or series
+  the user accepts), compare what was approved with `MARCA.md` and, for video,
+  `ESTILO-VIDEO.md`: anything they forbid, elements or effects they do not describe,
+  measures outside their ranges. Show each difference in plain words and ask which
+  should become a brand rule. Append those as entries; record the others in the
+  piece's `log.md` as exceptions for that piece, with who decided and their words.
+  If there are no differences, say so in one line.
+- Before writing `CAMBIOS-PENDIENTES.md`, apply the write checks of the brand
+  storage contract. Write entries in Spanish, in this form:
+
+  ```markdown
+  ## AAAA-MM-DD — <skill> — <MARCA.md | ESTILO-VIDEO.md> — abierto
+  - **Pedido:** <palabras del usuario, textuales>
+  - **Dónde:** <pieza o video-id y versión>
+  - **Toca:** <sección y línea actual del documento, citada, o «no está descrito»>
+  - **Tipo:** contradice | amplía | precisa
+  - **Propuesta:** <cómo quedaría la regla, en palabras simples>
+  ```
+
+  The owner closes an entry by changing `abierto` in its heading to
+  `aplicado AAAA-MM-DD`, `descartado AAAA-MM-DD: <motivo>`, or
+  `solo esa pieza AAAA-MM-DD`.
+
 ## 0. Brand context and product truth
 
 Resolve the brand using the shared contract above and read its `MARCA.md`. Only if
 no existing brand is found, ask for `$rss-image-inicio` first. Load approved identity, photographic precedents,
-restrictions, pending proposals, and the latest three approved references.
+restrictions, and the latest three approved references, then the open entries of
+`CAMBIOS-PENDIENTES.md` as «Pending brand changes» describes.
 For older documents, preserve approved “Locks visuales”; distinguish binding identity
 from precedents without silently changing existing approvals.
 If `MARCA.md` embeds a `Logo principal` image, resolve the local Markdown reference
@@ -317,9 +369,12 @@ Use `no disponible` for unavailable metadata; never invent a seed or measurement
 Distinguish `propuesta`, `validada` (technical review), and `aprobada` (user acceptance
 or explicit delegated authority). Record the approval basis when applicable.
 
-Do not update approved brand identity merely because an image was delivered. Keep
-unaccepted decisions under “Propuestas pendientes”; promote them and add the image to
-“Referencias aprobadas” only when approval is established. Keep the latest three there
+Do not update approved brand identity merely because an image was delivered, and do
+not write identity changes into `MARCA.md`: when the user approves the piece, compare
+it with `MARCA.md` and send each difference the user wants kept to
+`CAMBIOS-PENDIENTES.md`, as «Pending brand changes» describes. Add the approved image to
+“Referencias aprobadas” in `MARCA.md` only when approval is established; this list is
+the one part of `MARCA.md` this skill maintains. Keep the latest three there
 and retain earlier history in logs. Vary series images when it serves the message;
 consistency and recognizable campaign repetition are allowed.
 

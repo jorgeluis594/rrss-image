@@ -52,6 +52,57 @@ After saving, read back `MARCA.md`, check its local asset references, and report
 absolute path. Campaign outputs remain in the requested output folder; this contract
 changes only persistent brand storage.
 
+## Pending brand changes (shared contract)
+
+`MARCA.md` is owned by `$rss-image-inicio` and `ESTILO-VIDEO.md` by
+`$rss-video-estilo`; no other skill rewrites them, except the «Referencias aprobadas»
+list of `MARCA.md`, which `$rss-image-generar` maintains. Corrections the user makes while
+working that may belong in those lasting rules go to `CAMBIOS-PENDIENTES.md`, beside
+`MARCA.md`. Any skill may append entries there; only the owner of the affected
+document closes them, after the user approves the change in conversation. Never
+delete entries. `$rss-memoria`, when available, keeps history and lessons; this file
+is the queue of proposed rule changes, and the documents change only through it.
+
+- **On start.** After reading `MARCA.md` (and `ESTILO-VIDEO.md` for video), read
+  `CAMBIOS-PENDIENTES.md` if it exists. If it has `abierto` entries, tell the user
+  once, in one or two lines, how many there are, which document they affect, and
+  which skill closes them. Do not apply them and do not treat them as rules: the
+  documents rule until their owner records the change. Never repair a document as
+  a side effect of another task.
+- **While working.** When the user corrects something or asks for something new,
+  decide where it belongs:
+  - Only this piece (a crop, a word, a take, one timing): handle it in the piece's
+    own files.
+  - A lasting rule: the user says so («siempre», «en todos», «la marca es así»), the
+    same request already appears in another piece's `log.md` or in an open entry, or
+    it contradicts, extends, or narrows a line of `MARCA.md` or `ESTILO-VIDEO.md`.
+    Apply it to this piece once the user confirms, record that in the piece's
+    `log.md`, and append an entry.
+  - Unsure: ask once, «¿Esto es solo para esta pieza o para todas las de la marca?»,
+    when the answer changes what you record.
+- **At final approval** of a piece (a video reaching `terminado`, an image or series
+  the user accepts), compare what was approved with `MARCA.md` and, for video,
+  `ESTILO-VIDEO.md`: anything they forbid, elements or effects they do not describe,
+  measures outside their ranges. Show each difference in plain words and ask which
+  should become a brand rule. Append those as entries; record the others in the
+  piece's `log.md` as exceptions for that piece, with who decided and their words.
+  If there are no differences, say so in one line.
+- Before writing `CAMBIOS-PENDIENTES.md`, apply the write checks of the brand
+  storage contract. Write entries in Spanish, in this form:
+
+  ```markdown
+  ## AAAA-MM-DD — <skill> — <MARCA.md | ESTILO-VIDEO.md> — abierto
+  - **Pedido:** <palabras del usuario, textuales>
+  - **Dónde:** <pieza o video-id y versión>
+  - **Toca:** <sección y línea actual del documento, citada, o «no está descrito»>
+  - **Tipo:** contradice | amplía | precisa
+  - **Propuesta:** <cómo quedaría la regla, en palabras simples>
+  ```
+
+  The owner closes an entry by changing `abierto` in its heading to
+  `aplicado AAAA-MM-DD`, `descartado AAAA-MM-DD: <motivo>`, or
+  `solo esa pieza AAAA-MM-DD`.
+
 ## Language and interaction
 
 Communicate with the user entirely in Spanish, including questions, answer choices,
@@ -76,8 +127,11 @@ of fonts, hex codes, or lenses.
 
 ## 1. Orient and understand the desired change
 
-Read existing `MARCA.md` and available assets. Briefly say what is known and what is
-still a hypothesis; do not turn this into a final report. A document saying “interview
+Read existing `MARCA.md` and available assets. If `CAMBIOS-PENDIENTES.md` has open
+entries for `MARCA.md`, or the user asks to review, validate, or update the brand from
+what they have been doing, follow «Review mode» instead of rediscovery. Otherwise,
+briefly say what is known and what is still a hypothesis; do not turn this into a
+final report. A document saying “interview
 pending” is unfinished discovery, even if it contains many observations.
 
 Start with the most consequential open questions, for example:
@@ -249,3 +303,21 @@ Do not invent prior consent. New brand choices still require the interaction abo
 Report what was agreed and saved briefly. Stop: image production belongs to
 `$rss-image-generar`. If resuming later, use the conversation's open questions and the
 brief's accepted choices instead of restarting the interview.
+
+## Review mode
+
+Maintenance of an existing `MARCA.md`, not a new discovery: keep the accepted
+identity and change only what the user approves here.
+
+1. **Mechanical checks.** Every local reference in `MARCA.md` resolves to a file in
+   `referencias/`. Report a missing file; never invent a replacement.
+2. **Contradictions with `ESTILO-VIDEO.md`.** If the brand has one, quote both lines
+   and ask which should win. If the style should change, append an entry for
+   `ESTILO-VIDEO.md` for `$rss-video-estilo`; this skill never edits that file.
+3. **Decide.** Present the open entries for `MARCA.md` in small groups, in plain
+   words, each with your recommendation and the line it would change. For each, the
+   user chooses: apply, discard, or only that piece. Write the applied ones as rules
+   under the rules of step 5 (compact, no process history), and close each entry as
+   the shared contract describes.
+4. **Save.** Read `MARCA.md` back, check its local references, and report its
+   absolute path, what changed, and what remains open.

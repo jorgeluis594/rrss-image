@@ -1,0 +1,24 @@
+{
+  "name": "rrss-video-engine",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "remotion render src/index.ts Video",
+    "studio": "remotion studio src/index.ts",
+    "validar": "node scripts/validar.mjs",
+    "transcribir": "node scripts/transcribir.mjs",
+    "finalizar": "node scripts/finalizar.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.538",
+    "@remotion/install-whisper-cpp": "4.0.538",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.538"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}
