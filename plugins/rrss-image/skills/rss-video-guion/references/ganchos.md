@@ -12,6 +12,10 @@ many viewers start with the sound off:
 2. **On-screen text**: 3–8 words, large, readable without sound.
 3. **Spoken line**: states or completes the promise in one sentence.
 
+When the brand has `ESTILO-GUION.md`, its «Cómo abre» comes first: it describes the
+openings this brand uses, learned from videos the user chose. The types below name
+them and fill what it does not cover.
+
 ## Hook types
 
 | Type | Pattern | Example |

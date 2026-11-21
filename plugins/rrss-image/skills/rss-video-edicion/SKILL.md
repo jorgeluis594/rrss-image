@@ -101,8 +101,8 @@ and stop dependent work. Reading existing files does not require a probe.
 
 ## Pending brand changes (shared contract)
 
-`MARCA.md` is owned by `$rss-image-inicio` and `ESTILO-VIDEO.md` by
-`$rss-video-estilo`; no other skill rewrites them, except the «Referencias aprobadas»
+`MARCA.md` is owned by `$rss-image-inicio`, `ESTILO-VIDEO.md` by
+`$rss-video-estilo`, and `ESTILO-GUION.md` by `$rss-video-referentes`; no other skill rewrites them, except the «Referencias aprobadas»
 list of `MARCA.md`, which `$rss-image-generar` maintains. Corrections the user makes while
 working that may belong in those lasting rules go to `CAMBIOS-PENDIENTES.md`, beside
 `MARCA.md`. Any skill may append entries there; only the owner of the affected
@@ -110,7 +110,7 @@ document closes them, after the user approves the change in conversation. Never
 delete entries. `$rss-memoria`, when available, keeps history and lessons; this file
 is the queue of proposed rule changes, and the documents change only through it.
 
-- **On start.** After reading `MARCA.md` (and `ESTILO-VIDEO.md` for video), read
+- **On start.** After reading `MARCA.md` (and `ESTILO-VIDEO.md` and `ESTILO-GUION.md` for video), read
   `CAMBIOS-PENDIENTES.md` if it exists. If it has `abierto` entries, tell the user
   once, in one or two lines, how many there are, which document they affect, and
   which skill closes them. Do not apply them and do not treat them as rules: the
@@ -122,7 +122,7 @@ is the queue of proposed rule changes, and the documents change only through it.
     own files.
   - A lasting rule: the user says so («siempre», «en todos», «la marca es así»), the
     same request already appears in another piece's `log.md` or in an open entry, or
-    it contradicts, extends, or narrows a line of `MARCA.md` or `ESTILO-VIDEO.md`.
+    it contradicts, extends, or narrows a line of `MARCA.md`, `ESTILO-VIDEO.md`, or `ESTILO-GUION.md`.
     Apply it to this piece once the user confirms, record that in the piece's
     `log.md`, and append an entry.
   - Unsure: ask once, «¿Esto es solo para esta pieza o para todas las de la marca?»,
@@ -138,7 +138,7 @@ is the queue of proposed rule changes, and the documents change only through it.
   storage contract. Write entries in Spanish, in this form:
 
   ```markdown
-  ## AAAA-MM-DD — <skill> — <MARCA.md | ESTILO-VIDEO.md> — abierto
+  ## AAAA-MM-DD — <skill> — <MARCA.md | ESTILO-VIDEO.md | ESTILO-GUION.md> — abierto
   - **Pedido:** <palabras del usuario, textuales>
   - **Dónde:** <pieza o video-id y versión>
   - **Toca:** <sección y línea actual del documento, citada, o «no está descrito»>

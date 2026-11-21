@@ -1,12 +1,13 @@
 # rrss-image
 
-Codex skills for defining a brand's visual identity (`rss-image-inicio`), creating product ads (`rss-image-generar`), and making short vertical videos (`rss-video-guion`, `rss-video-produccion`, `rss-video-estilo`, `rss-video-edicion`). Image and video skills use decisions saved in `MARCA.md` and real product photos.
+Codex skills for defining a brand's visual identity (`rss-image-inicio`), creating product ads (`rss-image-generar`), and making short vertical videos (`rss-video-referentes`, `rss-video-guion`, `rss-video-produccion`, `rss-video-estilo`, `rss-video-edicion`). Image and video skills use decisions saved in `MARCA.md` and real product photos.
 
 ## Short-video skills
 
 Each video skill is a team specialty that owns specific files in `videos/<video-id>/` inside the brand directory and hands off through the `estado` field of `VIDEO.md`:
 
 - `rss-video-guion` writes the brief, hooks, and technical script (`VIDEO.md`) and one script per actor (`actores/`).
+- `rss-video-referentes` studies videos the user likes (how they hook, how image and voice work together, how they hold attention, how they speak) and, optionally, a short recording of how the user speaks, and saves `ESTILO-GUION.md` beside `MARCA.md`; `rss-video-guion` writes hooks and lines from it. It needs `ffmpeg` and uses the editing engine's local Whisper for transcription, with the video's own subtitles or pasted text as fallbacks.
 - `rss-video-produccion` turns an approved script into a storyboard, a shoot and generation plan (`rodaje.md`), and a reviewed index of filmed or generated clips (`material.md`).
 - `rss-video-estilo` defines with the user how the brand's videos are edited (four dials and a set of effects described in words) and saves `ESTILO-VIDEO.md` beside `MARCA.md`.
 - `rss-memoria` (optional, needs the `happy-memory` CLI) recalls and records the brand's content history: topics already covered, resources used, editing decisions and effects with their reasons, and what the user rejected.
@@ -14,9 +15,11 @@ Each video skill is a team specialty that owns specific files in `videos/<video-
 
 The script, material, and final video each require the user's explicit approval, recorded in `log.md`. Editing requires Node 20+, `ffmpeg`, and `ffprobe`; word-level captions build whisper.cpp locally on first use (`make` and a C++ compiler). The engine installs into the user-data directory (`rrss-image/motor-video/`). Remotion is free for individuals and companies of up to 3 people; larger companies need a [Remotion company license](https://www.remotion.dev/docs/license).
 
+After saving `MARCA.md`, `rss-image-inicio` asks whether the brand will make videos and, if so, offers to prepare the two video documents in the same conversation: it asks once for the example videos and runs `rss-video-referentes` and then `rss-video-estilo`, each with its own approval. Both can also be run on their own at any time.
+
 ## Brand rules that evolve with the work
 
-`MARCA.md` has one owner, `rss-image-inicio`, and `ESTILO-VIDEO.md` has one owner, `rss-video-estilo`; the other skills read them but never rewrite them (except the «Referencias aprobadas» list, which `rss-image-generar` maintains). When the user corrects something during a piece that sounds like a lasting rule, or approves a final video or image that departs from those documents, the working skill appends an entry to `CAMBIOS-PENDIENTES.md` beside `MARCA.md`: the user's words, the piece, the line it touches, and the proposed rule. Every skill mentions open entries once when it starts and never applies them on its own.
+`MARCA.md` has one owner, `rss-image-inicio`, `ESTILO-VIDEO.md` has one owner, `rss-video-estilo`, and `ESTILO-GUION.md` has one owner, `rss-video-referentes`; the other skills read them but never rewrite them (except the «Referencias aprobadas» list, which `rss-image-generar` maintains). When the user corrects something during a piece that sounds like a lasting rule, or approves a final video or image that departs from those documents, the working skill appends an entry to `CAMBIOS-PENDIENTES.md` beside `MARCA.md`: the user's words, the piece, the line it touches, and the proposed rule. Every skill mentions open entries once when it starts and never applies them on its own.
 
 Each owner has a review mode, run when there are open entries or when the user asks to review or update the brand or the style. It fixes mechanical issues (broken asset paths, effects missing fields or scripts), reports contradictions between `MARCA.md` and `ESTILO-VIDEO.md`, lists concrete differences that approved videos repeated outside the style, and lets the user apply, discard, or keep each change for one piece only. Only applied changes reach the documents.
 

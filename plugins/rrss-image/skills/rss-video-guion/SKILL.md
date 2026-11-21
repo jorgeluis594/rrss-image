@@ -45,8 +45,8 @@ and stop dependent work. Reading existing files does not require a probe.
 
 ## Pending brand changes (shared contract)
 
-`MARCA.md` is owned by `$rss-image-inicio` and `ESTILO-VIDEO.md` by
-`$rss-video-estilo`; no other skill rewrites them, except the «Referencias aprobadas»
+`MARCA.md` is owned by `$rss-image-inicio`, `ESTILO-VIDEO.md` by
+`$rss-video-estilo`, and `ESTILO-GUION.md` by `$rss-video-referentes`; no other skill rewrites them, except the «Referencias aprobadas»
 list of `MARCA.md`, which `$rss-image-generar` maintains. Corrections the user makes while
 working that may belong in those lasting rules go to `CAMBIOS-PENDIENTES.md`, beside
 `MARCA.md`. Any skill may append entries there; only the owner of the affected
@@ -54,7 +54,7 @@ document closes them, after the user approves the change in conversation. Never
 delete entries. `$rss-memoria`, when available, keeps history and lessons; this file
 is the queue of proposed rule changes, and the documents change only through it.
 
-- **On start.** After reading `MARCA.md` (and `ESTILO-VIDEO.md` for video), read
+- **On start.** After reading `MARCA.md` (and `ESTILO-VIDEO.md` and `ESTILO-GUION.md` for video), read
   `CAMBIOS-PENDIENTES.md` if it exists. If it has `abierto` entries, tell the user
   once, in one or two lines, how many there are, which document they affect, and
   which skill closes them. Do not apply them and do not treat them as rules: the
@@ -66,7 +66,7 @@ is the queue of proposed rule changes, and the documents change only through it.
     own files.
   - A lasting rule: the user says so («siempre», «en todos», «la marca es así»), the
     same request already appears in another piece's `log.md` or in an open entry, or
-    it contradicts, extends, or narrows a line of `MARCA.md` or `ESTILO-VIDEO.md`.
+    it contradicts, extends, or narrows a line of `MARCA.md`, `ESTILO-VIDEO.md`, or `ESTILO-GUION.md`.
     Apply it to this piece once the user confirms, record that in the piece's
     `log.md`, and append an entry.
   - Unsure: ask once, «¿Esto es solo para esta pieza o para todas las de la marca?»,
@@ -82,7 +82,7 @@ is the queue of proposed rule changes, and the documents change only through it.
   storage contract. Write entries in Spanish, in this form:
 
   ```markdown
-  ## AAAA-MM-DD — <skill> — <MARCA.md | ESTILO-VIDEO.md> — abierto
+  ## AAAA-MM-DD — <skill> — <MARCA.md | ESTILO-VIDEO.md | ESTILO-GUION.md> — abierto
   - **Pedido:** <palabras del usuario, textuales>
   - **Dónde:** <pieza o video-id y versión>
   - **Toca:** <sección y línea actual del documento, citada, o «no está descrito»>
@@ -162,9 +162,35 @@ identity, restrictions, logo). If there is none, ask for `$rss-image-inicio` fir
 a video can be scripted without it only if the user explicitly asks, and you record
 that the tone and identity are provisional.
 
+Read `ESTILO-GUION.md` beside `MARCA.md` if it exists: it is the brand's script
+guide, written by `$rss-video-referentes` from videos the user likes and, when
+recorded, from the way each person speaks. See «Script guide» below. If it does not
+exist, say once, in one line, that `$rss-video-referentes` can create it so scripts
+follow the user's examples and sound like them, and continue without it.
+
 If the user names an existing video, read its `VIDEO.md`, `log.md`, and any open
 `Solicitud de cambio`, and continue from its `estado`. Otherwise create a new video
 folder (after the write probe) with `VIDEO.md` at `estado: brief`.
+
+## Script guide (`ESTILO-GUION.md`)
+
+When the brand has one, the script is written from it, not from generic patterns:
+
+- It decides how the video opens, how image and voice work together, how often
+  something changes, how lines are spoken, and how the video closes. The reference
+  files of this skill fill only what the guide leaves undescribed.
+- Truth and representation, `MARCA.md`, and the facts of the brief win over the
+  guide. When the guide and a reference file disagree (speed, sentence length, kind
+  of opening), the guide wins.
+- A person with a «Cómo habla <persona>» section gets lines in their own way of
+  speaking: their sentence length, their starts and connectors, their words for the
+  product and the customer, none of the words they never use. Do not copy their
+  quoted sentences into a script; they show the manner.
+- The guide's examples illustrate a rule. Write new lines for this video; do not
+  reuse an example as a line.
+- If the user asks for something the guide does not describe or contradicts, do it
+  for this video and treat it as a possible lasting rule under «Pending brand
+  changes» (document: `ESTILO-GUION.md`).
 
 ## 1. Brief
 
@@ -189,12 +215,17 @@ decisions. Present it and wait for the user's confirmation or changes. Then set
 
 Choose one formula from `references/formulas.md`. Use the user's choice when given;
 when delegated, apply the selection order in that file and record the reason.
-One video has one formula and one main message.
+One video has one formula and one main message. With a script guide, its
+«Estructura» sets the blocks and their lengths; record the closest formula slug in
+`formula:` and note where the guide departs from it.
 
 ## 3. Hooks
 
 Write three hook variants of different types from `references/ganchos.md`, each with
-its first frame, spoken line, and on-screen text. Recommend one with a reason and
+its first frame, spoken line, and on-screen text. With a script guide, at least two
+of the three follow openings described in its «Cómo abre» (first frame, length of the
+first sentence, what the text does, second at which the promise is clear), and you
+say which; the third may try something the guide does not describe, labeled as such. Recommend one with a reason and
 let the user choose or combine. Keep the others in `VIDEO.md` as alternatives for
 future variants; do not mix them into the script.
 
@@ -206,7 +237,9 @@ and coverage. Check the timing budget in that file: spoken lines must fit the sc
 duration and the total must land within ±10% of `duracion_objetivo`.
 
 Lines meant to sound natural are written as intention plus a suggested line
-(`literal: no`); the actor may say it in their own words. Lines that carry a claim,
+(`literal: no`); the actor may say it in their own words. Write the suggested line as
+that person would say it aloud, following the script guide when there is one, not as
+a sentence that reads well on paper. Lines that carry a claim,
 price, offer, product name, or CTA are `literal: sí` and must be said exactly.
 
 ## 5. Review and approval

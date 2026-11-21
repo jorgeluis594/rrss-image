@@ -1,6 +1,6 @@
 ---
 name: rss-image-inicio
-description: Co-design brand identity with the user through an interactive discovery and visual-choice conversation, then create or update MARCA.md for $rss-image-generar. Use when starting a brand, refining its visual identity, or updating brand assets. Do not complete identity discovery as a one-shot asset summary.
+description: Co-design brand identity with the user through an interactive discovery and visual-choice conversation, then create or update MARCA.md for $rss-image-generar. Use when starting a brand, refining its visual identity, or updating brand assets. After saving, offers the video setup ($rss-video-referentes and $rss-video-estilo) to brands that will make videos. Do not complete identity discovery as a one-shot asset summary.
 ---
 
 Help the owner discover and choose a design identity through conversation. `MARCA.md`
@@ -54,8 +54,8 @@ changes only persistent brand storage.
 
 ## Pending brand changes (shared contract)
 
-`MARCA.md` is owned by `$rss-image-inicio` and `ESTILO-VIDEO.md` by
-`$rss-video-estilo`; no other skill rewrites them, except the «Referencias aprobadas»
+`MARCA.md` is owned by `$rss-image-inicio`, `ESTILO-VIDEO.md` by
+`$rss-video-estilo`, and `ESTILO-GUION.md` by `$rss-video-referentes`; no other skill rewrites them, except the «Referencias aprobadas»
 list of `MARCA.md`, which `$rss-image-generar` maintains. Corrections the user makes while
 working that may belong in those lasting rules go to `CAMBIOS-PENDIENTES.md`, beside
 `MARCA.md`. Any skill may append entries there; only the owner of the affected
@@ -63,7 +63,7 @@ document closes them, after the user approves the change in conversation. Never
 delete entries. `$rss-memoria`, when available, keeps history and lessons; this file
 is the queue of proposed rule changes, and the documents change only through it.
 
-- **On start.** After reading `MARCA.md` (and `ESTILO-VIDEO.md` for video), read
+- **On start.** After reading `MARCA.md` (and `ESTILO-VIDEO.md` and `ESTILO-GUION.md` for video), read
   `CAMBIOS-PENDIENTES.md` if it exists. If it has `abierto` entries, tell the user
   once, in one or two lines, how many there are, which document they affect, and
   which skill closes them. Do not apply them and do not treat them as rules: the
@@ -75,7 +75,7 @@ is the queue of proposed rule changes, and the documents change only through it.
     own files.
   - A lasting rule: the user says so («siempre», «en todos», «la marca es así»), the
     same request already appears in another piece's `log.md` or in an open entry, or
-    it contradicts, extends, or narrows a line of `MARCA.md` or `ESTILO-VIDEO.md`.
+    it contradicts, extends, or narrows a line of `MARCA.md`, `ESTILO-VIDEO.md`, or `ESTILO-GUION.md`.
     Apply it to this piece once the user confirms, record that in the piece's
     `log.md`, and append an entry.
   - Unsure: ask once, «¿Esto es solo para esta pieza o para todas las de la marca?»,
@@ -91,7 +91,7 @@ is the queue of proposed rule changes, and the documents change only through it.
   storage contract. Write entries in Spanish, in this form:
 
   ```markdown
-  ## AAAA-MM-DD — <skill> — <MARCA.md | ESTILO-VIDEO.md> — abierto
+  ## AAAA-MM-DD — <skill> — <MARCA.md | ESTILO-VIDEO.md | ESTILO-GUION.md> — abierto
   - **Pedido:** <palabras del usuario, textuales>
   - **Dónde:** <pieza o video-id y versión>
   - **Toca:** <sección y línea actual del documento, citada, o «no está descrito»>
@@ -300,9 +300,50 @@ paths while pruning process clutter. Read legacy sections (“Negocio”, “Cli
 retain an empty schema. An `aprobado` label is not evidence when the user disputes it.
 Do not invent prior consent. New brand choices still require the interaction above.
 
-Report what was agreed and saved briefly. Stop: image production belongs to
-`$rss-image-generar`. If resuming later, use the conversation's open questions and the
-brief's accepted choices instead of restarting the interview.
+Report what was agreed and saved briefly, then continue with step 6. Image
+production belongs to `$rss-image-generar`. If resuming later, use the conversation's
+open questions and the brief's accepted choices instead of restarting the interview.
+
+## 6. Video setup
+
+Starting a brand includes preparing it for video when the brand will make videos.
+Run this step once `MARCA.md` is saved with the identity accepted, never on a
+`borrador`. Two documents beside `MARCA.md` complete the setup, each owned by another
+skill:
+
+- `ESTILO-GUION.md`, by `$rss-video-referentes`: how the brand's scripts are told and
+  how the person speaks, learned from videos the user likes.
+- `ESTILO-VIDEO.md`, by `$rss-video-estilo`: how the videos are edited (movement,
+  rhythm, text, effects).
+
+1. **Ask whether the brand will make videos**, unless «Formatos y canales» of
+   `MARCA.md` already answers it: «¿Vas a hacer videos cortos (TikTok, Reels, Shorts)
+   con esta marca?». Record the answer in «Formatos y canales» as a design fact. If
+   the answer is no, stop here and do not ask again in later runs.
+2. **Offer what is missing.** Check which of the two documents exist. Offer only the
+   missing ones, in plain words, as a choice the user can take whole, in part, or
+   later: «Para que tus videos salgan bien desde el primero puedo dejar listas dos
+   cosas: cómo se cuentan (ganchos, guion y, si quieres, tu forma de hablar) y cómo
+   se editan (ritmo, textos, efectos). ¿Preparamos las dos ahora, solo una, o lo
+   dejamos para después?». If both exist, say so in one line and stop.
+3. **Ask for the example videos once.** Both skills start from videos the user
+   likes. When the user chose both, ask a single time for three to five links or
+   files and what they like in each, both in how it is told and in how it looks, and
+   use the same videos and comments in both skills.
+4. **Run the chosen skills in this conversation**, script guide first and editing
+   style second: invoke `$rss-video-referentes`, follow it until its document is
+   approved and saved or the user stops, then invoke `$rss-video-estilo` the same
+   way. Pass on what is already known (brand, the videos, the user's comments) so
+   neither repeats a question. Each skill keeps its own rounds and its own approval;
+   this skill does not shorten them, does not write their documents, and does not
+   treat the acceptance of `MARCA.md` as approval of anything in them.
+5. **Close.** Report which documents exist now, with their absolute paths, and what
+   was left for later with the skill that does it. If a skill is not available in
+   this installation, say which one and continue with the other.
+
+When this skill runs to update an existing brand, run this step only if the brand
+makes videos, or has not answered the question, and one of the two documents is
+missing; otherwise skip it silently.
 
 ## Review mode
 

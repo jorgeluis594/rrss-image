@@ -35,6 +35,9 @@ first and ends with `cta` or a `resultado` that contains the CTA.
 
 - Spoken Spanish at a natural, energetic pace is about 2.5 words per second
   (approximate). A 3-second hook holds about 7 spoken words.
+- When `ESTILO-GUION.md` records a measured speed for the person who says the line
+  («Cómo habla <persona>»), or a speed in «Cómo se habla», use that number instead
+  of 2.5.
 - Each scene's `linea` must fit its duration at that rate. If not, shorten the line,
   split the scene, or extend it while keeping the rhythm rules.
 - The sum of scene durations lands within ±10% of `duracion_objetivo`.
