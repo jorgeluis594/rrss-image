@@ -112,6 +112,7 @@ changes once created.
 | `edicion.md` | edicion | Cut plan, music, SFX, subtitles, export settings, QA. |
 | `edicion/` | edicion | Working files: `timeline.json` and its versions, music, SFX, captions, drafts, contact sheets. |
 | `exports/` | edicion | Approved final files per platform. |
+| `hojas/` | hojas | Shareable pages (recording sheet, script to approve, shoot plan) made by `$rss-video-hojas` from the files above. |
 | `log.md` | all (append only) | Dated entries: decisions, approvals, change requests. |
 
 Rules:
@@ -200,7 +201,8 @@ Write `rodaje.md` following `references/rodaje.md`:
 Present the plan and ask for confirmation before generating clips or before the user
 schedules a shoot. Actor-facing information already lives in `actores/`; if the
 call time or place for an actor is needed, add a short «Citación» section per talent
-in `rodaje.md` that the user can forward.
+in `rodaje.md` that the user can forward. Offer in one line the visual pages of
+`$rss-video-hojas` (the shoot plan and a recording sheet per person) to send them.
 
 ## 4. Produce material
 

@@ -168,6 +168,7 @@ changes once created.
 | `edicion.md` | edicion | Cut plan, music, SFX, subtitles, export settings, QA. |
 | `edicion/` | edicion | Working files: `timeline.json` and its versions, music, SFX, captions, drafts, contact sheets. |
 | `exports/` | edicion | Approved final files per platform. |
+| `hojas/` | hojas | Shareable pages (recording sheet, script to approve, shoot plan) made by `$rss-video-hojas` from the files above. |
 | `log.md` | all (append only) | Dated entries: decisions, approvals, change requests. |
 
 Rules:

@@ -1,6 +1,6 @@
 # rrss-image
 
-Codex skills for defining a brand's visual identity (`rss-image-inicio`), creating product ads (`rss-image-generar`), and making short vertical videos (`rss-video-referentes`, `rss-video-guion`, `rss-video-produccion`, `rss-video-estilo`, `rss-video-edicion`). Image and video skills use decisions saved in `MARCA.md` and real product photos.
+Codex skills for defining a brand's visual identity (`rss-image-inicio`), creating product ads (`rss-image-generar`), and making short vertical videos (`rss-video-referentes`, `rss-video-guion`, `rss-video-produccion`, `rss-video-estilo`, `rss-video-edicion`, `rss-video-hojas`). Image and video skills use decisions saved in `MARCA.md` and real product photos.
 
 ## Short-video skills
 
@@ -9,6 +9,7 @@ Each video skill is a team specialty that owns specific files in `videos/<video-
 - `rss-video-guion` writes the brief, hooks, and technical script (`VIDEO.md`) and one script per actor (`actores/`).
 - `rss-video-referentes` studies videos the user likes (how they hook, how image and voice work together, how they hold attention, how they speak) and, optionally, a short recording of how the user speaks, and saves `ESTILO-GUION.md` beside `MARCA.md`; `rss-video-guion` writes hooks and lines from it. It needs `ffmpeg` and uses the editing engine's local Whisper for transcription, with the video's own subtitles or pasted text as fallbacks.
 - `rss-video-produccion` turns an approved script into a storyboard, a shoot and generation plan (`rodaje.md`), and a reviewed index of filmed or generated clips (`material.md`).
+- `rss-video-hojas` turns a video's files into visual pages for people who do not read Markdown: a recording sheet per person (how to set up the phone, the script straight through, and each scene with its frames and clips), the script for the owner or client to approve, and the shoot plan. It publishes them as an Artifact where the host supports it, or writes one self-contained HTML file. It needs `node` and `ffmpeg`.
 - `rss-video-estilo` defines with the user how the brand's videos are edited (four dials and a set of effects described in words) and saves `ESTILO-VIDEO.md` beside `MARCA.md`.
 - `rss-memoria` (optional, needs the `happy-memory` CLI) recalls and records the brand's content history: topics already covered, resources used, editing decisions and effects with their reasons, and what the user rejected.
 - `rss-video-edicion` writes the cut plan (`edicion.md`) and a `timeline.json`, renders drafts with its bundled Remotion engine, checks them with measurements and with an evaluator subagent (strange frames, strange starts, unreadable text) on the selected takes and each draft, and exports the final files to `exports/`. It follows `ESTILO-VIDEO.md` and writes the brand's effect scripts from its descriptions, indexed in `efectos/INDICE.md`.

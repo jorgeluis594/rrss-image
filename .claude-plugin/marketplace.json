@@ -1,0 +1,13 @@
+{
+  "name": "rrss-image",
+  "owner": { "name": "jorgeluis594" },
+  "plugins": [
+    {
+      "name": "rrss-image",
+      "source": "./plugins/rrss-image",
+      "description": "Define a brand's visual identity, create product ads, and make short vertical videos for social media.",
+      "version": "1.5.0",
+      "strict": false
+    }
+  ]
+}

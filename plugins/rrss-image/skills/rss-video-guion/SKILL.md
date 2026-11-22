@@ -112,6 +112,7 @@ changes once created.
 | `edicion.md` | edicion | Cut plan, music, SFX, subtitles, export settings, QA. |
 | `edicion/` | edicion | Working files: `timeline.json` and its versions, music, SFX, captions, drafts, contact sheets. |
 | `exports/` | edicion | Approved final files per platform. |
+| `hojas/` | hojas | Shareable pages (recording sheet, script to approve, shoot plan) made by `$rss-video-hojas` from the files above. |
 | `log.md` | all (append only) | Dated entries: decisions, approvals, change requests. |
 
 Rules:
@@ -267,7 +268,8 @@ and say in the delivery which actors received a changed script.
 ## 7. Delivery
 
 Read back `VIDEO.md` and the actor scripts, and report their absolute paths, the
-version, the `estado`, and anything still open. Stop: storyboard, shoot plan, and
+version, the `estado`, and anything still open. Offer in one line the visual pages of
+`$rss-video-hojas` (the script for the approver, a recording sheet per actor). Stop: storyboard, shoot plan, and
 generation belong to `$rss-video-produccion`.
 
 ## VIDEO.md structure
